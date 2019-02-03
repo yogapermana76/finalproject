@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>E-Cashier</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-1">
+                <button id="btnbg" class="btn btn-info btn-mrgn">Change Background</button>
+            </div>
+            <div class="col-md-10"><h1 class="text-center">
+                E-CASHIER
+            </h1></div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <div class="container-fluid">
+        <div class="row mrgcontent">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10 content">
+                <!-- input -->
+                <h4><strong>Hitung pembelian</strong> </h4>
+                <input id="description" type="text" placeholder="Nama Barang" class="marginright">
+                <input id="qty" type="number" placeholder="Qty Barang" class="marginright">
+                <input id="price" type="number" placeholder="Harga Barang" class="marginright">
+                <button id="add" class="btn btn-success" onclick="addCart(description.value, qty.value, price.value)">Tambah Barang</button>
+                <button id="deleted" class="btn btn-danger">Hapus Barang</button>
+
+                <!-- output -->
+                <div class="panel panel-default marginpanel">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Discription</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data">
+                        <!-- data disini -->
+                        </tbody>
+                        <tfoot>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Grand Total</strong></td>
+                            <!-- table data untuk total yang selalu diupdate setiap kali ada penambahan data di tbody -->
+                            <td id="total">0</td>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
